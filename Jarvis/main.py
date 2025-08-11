@@ -12,7 +12,7 @@ import os
 
 recognizer = sr.Recognizer()
 engine = pyttsx3.init()
-newsapi = "5709a6a4968141dc8433488388c399c4"
+newsapi = "NEWS API KEY"
 
 def speak_old(text):
     engine.say(text)
