@@ -1,0 +1,43 @@
+class Train:
+    def __init__(self, name, fare, seats):
+        self.name = name
+        self.fare = fare
+        self.seats = seats
+
+    def get_status(self):
+        print(f"Train: {self.name}")
+        print(f"Available seats: {self.seats}")
+
+    def get_fare_info(self):
+        print(f"The fare for the train '{self.name}' is ₹{self.fare}")
+
+    def book_ticket(self):
+        if self.seats > 0:
+            print("Ticket booked successfully!")
+            self.seats -= 1
+            print(f"Remaining seats: {self.seats}")
+        else:
+            print("Sorry, no seats available.")
+
+# Example usage
+train1 = Train("Rajdhani Express", 1500, 5)
+
+while True:
+    print("\n--- Indian Railways ---")
+    print("1. Book Ticket")
+    print("2. Get Status")
+    print("3. Get Fare Info")
+    print("4. Exit")
+    choice = input("Enter your choice (1-4): ")
+
+    if choice == '1':
+        train1.book_ticket()
+    elif choice == '2':
+        train1.get_status()
+    elif choice == '3':
+        train1.get_fare_info()
+    elif choice == '4':
+        print("Thank you for using Indian Railways Service!")
+        break
+    else:
+        print("Invalid choice. Please try again.")
